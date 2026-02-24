@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pablo Millán | Full Stack Developer</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#5048e5',
+              'background-light': '#f6f6f8',
+              'background-dark': '#121121',
+            },
+            fontFamily: {
+              display: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .glass-effect {
+        background: rgba(18, 17, 33, 0.8);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300"
+  >
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 border-b border-primary/10 glass-effect"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-3">
+          <div class="bg-primary p-2 rounded-lg text-white">
+            <span class="material-symbols-outlined block">terminal</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight">PM</span>
+        </div>
+        <div class="hidden md:flex items-center gap-10">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#home"
+            >Home</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#experience"
+            >Experience</a
+          >
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#contact"
+            >Contact</a
+          >
+        </div>
+        <a
+          class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+          href="#contact"
+        >
+          Contact Me
+        </a>
+      </div>
+    </nav>
+
+    <main class="pt-20">
+      <!-- Hero Section -->
+      <section id="home" class="relative overflow-hidden py-24 md:py-32">
+        <!-- Fondos decorativos -->
+        <div
+          class="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-20 pointer-events-none"
+        >
+          <div
+            class="absolute top-1/4 right-1/4 w-96 h-96 bg-primary rounded-full blur-[120px]"
+          ></div>
+        </div>
+
+        <div
+          class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center"
+        >
+          <!-- Texto principal -->
+          <header class="flex flex-col gap-8">
+            <!-- Estado disponible -->
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/20 w-fit"
+            >
+              <span class="relative flex h-2 w-2">
+                <span
+                  class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"
+                ></span>
+                <span
+                  class="relative inline-flex rounded-full h-2 w-2 bg-primary"
+                ></span>
+              </span>
+              <span class="text-xs font-bold uppercase tracking-wider"
+                >Available for work</span
+              >
+            </div>
+
+            <!-- Nombre y descripción -->
+            <hgroup class="space-y-4">
+              <h1
+                class="text-5xl md:text-7xl font-black leading-[1.1] tracking-tight"
+              >
+                Hola, soy <span class="text-primary">Pablo Millán</span>
+              </h1>
+              <p
+                class="text-xl text-slate-600 dark:text-slate-400 max-w-lg leading-relaxed"
+              >
+                Desarrollador Web Full Stack. Transformando ideas complejas en
+                experiencias digitales fluidas y escalables.
+              </p>
+            </hgroup>
+
+            <!-- Botones -->
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                class="bg-primary text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:translate-y-[-2px] transition-all shadow-xl shadow-primary/30"
+              >
+                Contact Me
+                <span class="material-symbols-outlined text-lg"
+                  >arrow_forward</span
+                >
+              </a>
+              <a
+                href="#projects"
+                class="bg-slate-200 dark:bg-slate-800/50 px-8 py-4 rounded-xl font-bold hover:bg-slate-300 dark:hover:bg-slate-800 transition-all"
+              >
+                View Work
+              </a>
+            </div>
+          </header>
+
+          <!-- Imagen -->
+          <figure class="relative group">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-primary to-indigo-500 rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"
+            ></div>
+            <div
+              class="relative bg-white dark:bg-slate-900 rounded-2xl overflow-hidden aspect-square border border-slate-200 dark:border-slate-800"
+            >
+              <img
+                alt="Portrait of Pablo Millán"
+                class="w-full h-full object-cover"
+                data-alt="Professional portrait of a male web developer"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQA9flliigfV2glxvfA7NsLcPISm9vPyc_rCPychNe1LYWo9dc2OiXwBPSrlOZnZtOW8LtcPkecpNlY3Bt1YsOX_2H06ImDaonaB3lSthIYdkXTrznHZLyFkeY5jxDMILOgTJKcgSotu3qWoK0gij6-kbM7JcffEuFnHQg3XYN7OivZu2XHK7UeorT5B-HtiK0qUIeQ6gykpIboPOscTLGuYj9P5ptSub5yMCJ6qrhD2SXKN9jalbKhS4IOP3FXJaQ530y3Xb062g"
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="py-24 bg-slate-50 dark:bg-slate-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+          <article class="max-w-3xl">
+            <header class="mb-10">
+              <h2
+                class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+              >
+                About Me
+              </h2>
+              <p class="text-3xl md:text-4xl font-bold">
+                Building the web with precision and passion.
+              </p>
+            </header>
+
+            <p
+              class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10"
+            >
+              Full Stack Web Developer with 5+ years of experience in building
+              high-quality, scalable web applications. I specialize in modern
+              technologies like React, Node.js, and cloud architecture. My
+              approach combines technical excellence with a deep understanding
+              of user needs to deliver impactful solutions
+            </p>
+
+            <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
+              <li class="h-full">
+                <article
+                  class="h-full flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+                >
+                  <span class="material-symbols-outlined text-primary mb-3">
+                    code
+                  </span>
+                  <h3 class="font-bold mb-1">Frontend</h3>
+                  <p class="text-sm text-slate-500">React, Vue, Tailwind</p>
+                </article>
+              </li>
+
+              <li class="h-full">
+                <article
+                  class="h-full flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+                >
+                  <span class="material-symbols-outlined text-primary mb-3">
+                    database
+                  </span>
+                  <h3 class="font-bold mb-1">Backend</h3>
+                  <p class="text-sm text-slate-500">Node, Python, Go</p>
+                </article>
+              </li>
+
+              <li class="h-full">
+                <article
+                  class="h-full flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+                >
+                  <span class="material-symbols-outlined text-primary mb-3">
+                    cloud
+                  </span>
+                  <h3 class="font-bold mb-1">Cloud</h3>
+                  <p class="text-sm text-slate-500">AWS, Docker, CI/CD</p>
+                </article>
+              </li>
+
+              <li class="h-full">
+                <article
+                  class="h-full flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700"
+                >
+                  <span class="material-symbols-outlined text-primary mb-3">
+                    devices
+                  </span>
+                  <h3 class="font-bold mb-1">UI/UX</h3>
+                  <p class="text-sm text-slate-500">Figma, Prototyping</p>
+                </article>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="py-24">
+        <!-- Encabezado de la sección -->
+        <header
+          class="max-w-7xl mx-auto px-6 mb-16 flex justify-between items-end"
+        >
+          <div>
+            <h2
+              class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+            >
+              Projects
+            </h2>
+            <p class="text-3xl md:text-4xl font-bold">Featured Works</p>
+          </div>
+          <a
+            href="projects.html"
+            class="text-primary font-bold flex items-center gap-2"
+          >
+            See all projects
+            <span
+              class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+              >arrow_right_alt</span
+            >
+          </a>
+        </header>
+
+        <!-- Grid de proyectos -->
+        <ul
+          class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch"
+        >
+          <!-- Proyecto 1 -->
+          <li class="h-full">
+            <article
+              class="group flex flex-col h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all"
+            >
+              <figure class="aspect-video overflow-hidden">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9sAI3cd_2LuArxGymeu6Fsk1pFd0cbQ0vxwaVpZ6Br7-0W9I3so6LclKOfW9XVvCAZRa6rfQrNJunqaId4vPZQJOivP-WFwVdMA9FbX0alQQ7AQYpbIa-uPGPAvN-75b2EciC4kAcL3xYllWmvWH0C9v4i0tRSAVFiYDJ59Z5UC1PY0BGcxPjtsvmMLPnHBagL40TeKLCPmCNHc0xO4l7aoH1VBJILer-x8i0rZ5q252GeKuM2fqA2t3gjiNLpp1JFwl6WIanaC0"
+                  alt="E-commerce project"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </figure>
+
+              <header class="p-8 flex flex-col flex-1">
+                <ul class="flex gap-2 mb-4 text-xs font-bold flex-wrap">
+                  <li class="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                    Next.js
+                  </li>
+                  <li class="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                    Stripe
+                  </li>
+                </ul>
+                <h3 class="text-xl font-bold mb-2">Nexus Marketplace</h3>
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-1"
+                >
+                  A high-performance digital goods marketplace with real-time
+                  analytics and global payment processing.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto"
+                >
+                  View Project
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform"
+                    >open_in_new</span
+                  >
+                </a>
+              </header>
+            </article>
+          </li>
+
+          <!-- Proyecto 2 -->
+          <li class="h-full">
+            <article
+              class="group flex flex-col h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all"
+            >
+              <figure class="aspect-video overflow-hidden">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPpyDa8xlXYc3NFXZpiHkUQjezyzRD7J606qd-rrKCeNa3u4Evo3T5idBqzT5WDUwt3jJn3t6FCKrGi7PVg9OO8DH0gERjlQBvdG8ZzPwGTJFyg7l_d__p4p3g3qIX04Mqsj5OhBdwBh2Dc829Uo_6l18qhZIGtNChBQgxBXxhlft4baXW3uWZrGNn84KSJdUKjAVaYEbnhZYkKkxBmHP_pfXPzbx_pMe6mmAWYvJ1-bcYia753Qx8Ito760wIA2AVFkGCT91hPuc"
+                  alt="Analytics dashboard"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </figure>
+
+              <header class="p-8 flex flex-col flex-1">
+                <ul class="flex gap-2 mb-4 text-xs font-bold flex-wrap">
+                  <li class="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                    Python
+                  </li>
+                  <li class="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                    D3.js
+                  </li>
+                </ul>
+                <h3 class="text-xl font-bold mb-2">DataInsight Pro</h3>
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-1"
+                >
+                  Real-time traffic monitoring and analysis tool for urban
+                  infrastructure management.
+                </p>
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto"
+                >
+                  View Project
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform"
+                    >open_in_new</span
+                  >
+                </a>
+              </header>
+            </article>
+          </li>
+
+          <!-- Proyecto 3 -->
+          <li class="h-full">
+            <article
+              class="group flex flex-col h-full bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all"
+            >
+              <figure class="aspect-video overflow-hidden">
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4lQ7Yg6CE-eUZXSM6fHUt2snFkueQKwQw6Qq-OMyMsB8d1_Q1h_HrLZJt0PVZ5lngngpk8SHnJwNFYMWm07FHixh2FWX5yJD0bUyxbKtUa1Cfyr0hzzgFlXqFNlEPxeJ-ERHKRICM-KP6CkY71O-t9SRGUFeZd-KQfsBDNkgqpkzyaVIY0sMqO-7WAg_GEa6PSYawuWES9Ic-Fke6Qpofu1AG6AfphdGFNMfr5yyEL6k4Kr_tCPe46lwzgMqtRUDHQdaFrWTXMY"
+                  alt="Collaborative tool"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </figure>
+
+              <header class="p-8 flex flex-col flex-1">
+                <ul class="flex gap-2 mb-4 text-xs font-bold flex-wrap">
+                  <li class="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                    WebRTC
+                  </li>
+                  <li class="px-3 py-1 bg-primary/10 text-primary rounded-full">
+                    Redis
+                  </li>
+                </ul>
+                <h3 class="text-xl font-bold mb-2">SyncPad</h3>
+                <p
+                  class="text-slate-500 dark:text-slate-400 text-sm mb-6 flex-1"
+                >
+                  Collaborative markdown editor with real-time cursors and
+                  version control integration.
+                </p>
+                <a
+                  href="https://pablomm03.github.io/InteractiveTaskManager/"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-primary mt-auto"
+                >
+                  View Project
+                  <span
+                    class="material-symbols-outlined text-sm group-hover:translate-x-0.5 transition-transform"
+                    >open_in_new</span
+                  >
+                </a>
+              </header>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="py-24 bg-slate-50 dark:bg-slate-900/30">
+        <header class="max-w-4xl mx-auto px-6 text-center mb-16">
+          <h2
+            class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
+          >
+            Experience
+          </h2>
+          <h3 class="text-3xl md:text-4xl font-bold">
+            My Professional Journey
+          </h3>
+        </header>
+
+        <div class="max-w-4xl mx-auto px-6 space-y-12">
+          <!-- Experience Item 1 -->
+          <article
+            class="relative pl-12 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-[-48px] before:w-px before:bg-slate-200 dark:before:bg-slate-800"
+          >
+            <div
+              class="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"
+            ></div>
+            <header
+              class="flex flex-col md:flex-row md:items-start justify-between gap-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">Senior Full Stack Developer</h3>
+                <p class="text-primary font-medium">TechInnovate Solutions</p>
+              </div>
+              <time
+                class="text-sm font-bold px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 w-fit"
+                >2021 — Present</time
+              >
+            </header>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+              Leading the core platform team in migrating a legacy monolithic
+              architecture to high-performance microservices. Mentoring junior
+              developers and defining best practices for CI/CD pipelines.
+            </p>
+          </article>
+
+          <!-- Experience Item 2 -->
+          <article
+            class="relative pl-12 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-[-48px] before:w-px before:bg-slate-200 dark:before:bg-slate-800"
+          >
+            <div
+              class="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"
+            ></div>
+            <header
+              class="flex flex-col md:flex-row md:items-start justify-between gap-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">Backend Engineer</h3>
+                <p class="text-primary font-medium">CloudScale Inc.</p>
+              </div>
+              <time
+                class="text-sm font-bold px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 w-fit"
+                >2018 — 2021</time
+              >
+            </header>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+              Focused on API optimization and database performance. Reduced
+              server response times by 40% using advanced caching strategies and
+              optimized SQL queries.
+            </p>
+          </article>
+
+          <!-- Experience Item 3 -->
+          <article class="relative pl-12">
+            <div
+              class="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"
+            ></div>
+            <header
+              class="flex flex-col md:flex-row md:items-start justify-between gap-4"
+            >
+              <div>
+                <h3 class="text-xl font-bold">Web Developer</h3>
+                <p class="text-primary font-medium">Digital Craft Studio</p>
+              </div>
+              <time
+                class="text-sm font-bold px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 w-fit"
+                >2016 — 2018</time
+              >
+            </header>
+            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+              Developed responsive user interfaces and interactive components
+              for diverse clients. Collaboration with designers to ensure
+              pixel-perfect implementations.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="bg-primary rounded-[2rem] p-8 md:p-16 text-white overflow-hidden relative shadow-2xl shadow-primary/20"
+          >
+            <!-- Icono decorativo -->
+            <div class="absolute top-0 right-0 p-12 opacity-10">
+              <span class="material-symbols-outlined text-[200px]">mail</span>
+            </div>
+
+            <div class="relative z-10 grid lg:grid-cols-2 gap-16">
+              <!-- Información de contacto -->
+              <address class="not-italic">
+                <header>
+                  <h2 class="text-4xl md:text-5xl font-black mb-6">
+                    Let's work together.
+                  </h2>
+                  <p class="text-xl text-primary-100/80 mb-10 max-w-md">
+                    Have a project in mind? Looking for a partner to build
+                    something amazing? Feel free to reach out.
+                  </p>
+                </header>
+
+                <div class="space-y-6">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-12 rounded-xl bg-white/10 flex items-center justify-center"
+                    >
+                      <span class="material-symbols-outlined"
+                        >alternate_email</span
+                      >
+                    </div>
+                    <div>
+                      <p class="text-sm text-white/60">Email me at</p>
+                      <a
+                        class="font-bold text-lg hover:underline"
+                        href="mailto:hola@juanperez.dev"
+                        >hola@juanperez.dev</a
+                      >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="size-12 rounded-xl bg-white/10 flex items-center justify-center"
+                    >
+                      <span class="material-symbols-outlined">location_on</span>
+                    </div>
+                    <div>
+                      <p class="text-sm text-white/60">Location</p>
+                      <p
+                        class="font-bold text-lg"
+                        data-location="Madrid, Spain"
+                      >
+                        Madrid, Spain
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </address>
+
+              <!-- Formulario de contacto -->
+              <form class="space-y-4" aria-label="Contact Form">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <label class="hidden" for="fullName">Full Name</label>
+                  <input
+                    id="fullName"
+                    type="text"
+                    placeholder="Full Name"
+                    class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
+                  />
+
+                  <label class="hidden" for="emailAddress">Email Address</label>
+                  <input
+                    id="emailAddress"
+                    type="email"
+                    placeholder="Email Address"
+                    class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
+                  />
+                </div>
+
+                <label class="hidden" for="subject">Subject</label>
+                <input
+                  id="subject"
+                  type="text"
+                  placeholder="Subject"
+                  class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
+                />
+
+                <label class="hidden" for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Your Message"
+                  class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
+                ></textarea>
+
+                <button
+                  type="submit"
+                  class="w-full bg-white text-primary font-black py-4 rounded-xl hover:bg-slate-100 transition-colors shadow-lg"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8"
+      >
+        <!-- Identidad / Marca -->
+        <div class="flex items-center gap-3">
+          <div class="bg-primary p-1.5 rounded text-white">
+            <span class="material-symbols-outlined text-sm block"
+              >terminal</span
+            >
+          </div>
+          <address class="not-italic font-bold">Juan Pérez</address>
+        </div>
+
+        <!-- Derechos -->
+        <p class="text-slate-500 text-sm">
+          © 2024 Juan Pérez. Built with precision and caffeine.
+        </p>
+
+        <!-- Enlaces de redes / iconos -->
+        <nav class="flex gap-4" aria-label="Social Links">
+          <a
+            class="size-10 rounded-lg flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-all"
+            href="#"
+            aria-label="Website"
+          >
+            <span class="material-symbols-outlined text-lg">public</span>
+          </a>
+          <a
+            class="size-10 rounded-lg flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-all"
+            href="#"
+            aria-label="GitHub"
+          >
+            <span class="material-symbols-outlined text-lg">code</span>
+          </a>
+          <a
+            class="size-10 rounded-lg flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-all"
+            href="#"
+            aria-label="Portfolio link"
+          >
+            <span class="material-symbols-outlined text-lg">link</span>
+          </a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
