@@ -60,92 +60,192 @@
       class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Barra principal -->
         <div class="flex h-16 items-center justify-between">
-          <div class="flex items-center gap-3">
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="flex items-center gap-3"
+            aria-label="Ir a la página principal"
+          >
             <div class="p-2 bg-primary/10 rounded-lg">
-              <span class="material-symbols-outlined text-primary"
-                >terminal</span
+              <span
+                class="material-symbols-outlined text-primary"
+                aria-hidden="true"
               >
+                terminal
+              </span>
             </div>
-            <span class="text-xl font-bold tracking-tight">Pablo Millán</span>
-          </div>
-          <nav class="hidden md:flex items-center gap-8">
+            <span class="text-xl font-bold tracking-tight"> Pablo Millán </span>
+          </a>
+
+          <!-- Navegación Desktop -->
+          <nav
+            class="hidden md:flex items-center gap-8"
+            aria-label="Navegación principal"
+          >
             <a
-              class="text-sm font-medium hover:text-primary transition-colors"
               href="index.html"
-              >Home</a
+              class="text-sm font-medium hover:text-primary transition-colors"
             >
+              Home
+            </a>
+
             <a
+              href="projects.html"
+              aria-current="page"
               class="text-sm font-semibold text-primary border-b-2 border-primary pb-1"
-              href="#"
-              >Projects</a
             >
+              Projects
+            </a>
+
             <a
-              class="text-sm font-medium hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
               href="about.html"
-              >About</a
-            >
-            <a
               class="text-sm font-medium hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
-              href="contact.html"
-              >Contact</a
             >
+              About
+            </a>
+
+            <a
+              href="contact.html"
+              class="text-sm font-medium hover:text-primary transition-colors text-slate-600 dark:text-slate-400"
+            >
+              Contact
+            </a>
           </nav>
+
+          <!-- Acciones derecha -->
           <div class="flex items-center gap-4">
+            <!-- Botón menú móvil -->
             <button
+              class="md:hidden p-2 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Abrir menú"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+
+            <!-- Resume (solo desktop) -->
+            <a
+              href="/resume.pdf"
+              download
               class="hidden sm:flex bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all items-center gap-2"
             >
-              <span class="material-symbols-outlined text-sm">description</span>
+              <span
+                class="material-symbols-outlined text-sm"
+                aria-hidden="true"
+              >
+                description
+              </span>
               Resume
-            </button>
-            <div
-              class="h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-primary/20 overflow-hidden"
+            </a>
+
+            <!-- Avatar -->
+            <figure
+              class="hidden sm:block h-10 w-10 rounded-full bg-slate-200 dark:bg-slate-800 border-2 border-primary/20 overflow-hidden"
             >
               <img
-                class="w-full h-full object-cover"
-                data-alt="Juan Pérez Professional Portrait"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzo7UHMiaFW6TXeoAe1vD1-_2s35lWrbpUWi6AOFlakxbYOVlIvZyxuGxsFzb_wg1hp3bCgok5v1wrEa3LoTJLZNZci0bmErRD6QcCTXkVfdQyEgsyJyehuzsJ76m8eS25VouekjyXD7o5fFrP0XJjKlXlxvXVFWFbuPEV3qBAyjQXDwIBRFSfRWAQiv-2GpmNRrrkDZqpKrUJFEmkMoV-oaALpSZJ0Qwasq8qMz7gU9rPqgaOsnhNC4CuWgTxxUIBYR4O-Z90O7s"
+                alt="Retrato profesional de Pablo Millán"
+                class="w-full h-full object-cover"
+                loading="lazy"
               />
-            </div>
+            </figure>
           </div>
         </div>
+
+        <!-- Navegación Mobile -->
+        <nav
+          id="mobile-menu"
+          class="md:hidden hidden flex-col gap-4 px-4 pb-6 pt-2"
+          aria-label="Navegación móvil"
+        >
+          <a
+            href="index.html"
+            class="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Home
+          </a>
+
+          <a
+            href="projects.html"
+            class="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Projects
+          </a>
+
+          <a
+            href="about.html"
+            class="text-sm font-medium hover:text-primary transition-colors"
+          >
+            About
+          </a>
+
+          <a
+            href="contact.html"
+            class="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Contact
+          </a>
+        </nav>
       </div>
     </header>
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       <!-- Hero/Header Section -->
-      <div class="mb-12">
-        <h1 class="text-4xl sm:text-5xl font-black mb-4 tracking-tight">
-          My Projects
-        </h1>
-        <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
-          A curated selection of my technical work, focusing on full-stack
-          development, modern UI/UX, and scalable backends.
-        </p>
-        <div class="mt-8 flex flex-wrap gap-3">
+      <section id="projects" aria-labelledby="projects-title" class="mb-12">
+        <!-- Encabezado de sección -->
+        <header class="space-y-4">
+          <h1
+            id="projects-title"
+            class="text-4xl sm:text-5xl font-black tracking-tight"
+          >
+            My Projects
+          </h1>
+
+          <p class="text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
+            A curated selection of my technical work, focusing on full-stack
+            development, modern UI/UX, and scalable backends.
+          </p>
+        </header>
+
+        <!-- Filtros -->
+        <nav class="mt-8 flex flex-wrap gap-3" aria-label="Project filters">
           <button
+            type="button"
+            aria-pressed="true"
             class="px-6 py-2 rounded-full bg-primary text-white text-sm font-bold"
           >
             All Work
           </button>
+
           <button
+            type="button"
+            aria-pressed="false"
             class="px-6 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all"
           >
             Frontend
           </button>
+
           <button
+            type="button"
+            aria-pressed="false"
             class="px-6 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all"
           >
             Backend
           </button>
+
           <button
+            type="button"
+            aria-pressed="false"
             class="px-6 py-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-sm font-medium hover:bg-primary/10 hover:text-primary transition-all"
           >
             AI/ML
           </button>
-        </div>
-      </div>
+        </nav>
+      </section>
       <!-- Project Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project Card 1 -->
         <div
           class="project-card group flex flex-col bg-white dark:bg-card-dark rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:shadow-primary/5 transition-all"
@@ -374,39 +474,64 @@
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <!-- Footer Section -->
       <footer
         class="mt-20 pt-12 border-t border-slate-200 dark:border-slate-800"
+        role="contentinfo"
       >
         <div
           class="flex flex-col md:flex-row justify-between items-center gap-8"
         >
-          <div>
-            <p class="text-slate-500 dark:text-slate-400 text-sm">
-              © 2024 Juan Pérez. Built with precision and passion.
-            </p>
-          </div>
-          <div class="flex items-center gap-6">
-            <a
-              class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-xl">hub</span>
-            </a>
-            <a
-              class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-xl">link</span>
-            </a>
-            <a
-              class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
-              href="#"
-            >
-              <span class="material-symbols-outlined text-xl">mail</span>
-            </a>
-          </div>
+          <!-- Copyright -->
+          <p class="text-slate-500 dark:text-slate-400 text-sm">
+            © 2024 Pablo Millán. Built with precision and passion.
+          </p>
+
+          <!-- Social links -->
+          <nav aria-label="Redes sociales">
+            <ul class="flex items-center gap-6">
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
+                  aria-label="GitHub"
+                >
+                  <span
+                    class="material-symbols-outlined text-xl"
+                    aria-hidden="true"
+                    >hub</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
+                  aria-label="Website"
+                >
+                  <span
+                    class="material-symbols-outlined text-xl"
+                    aria-hidden="true"
+                    >link</span
+                  >
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-primary transition-colors flex items-center gap-1"
+                  aria-label="Email"
+                >
+                  <span
+                    class="material-symbols-outlined text-xl"
+                    aria-hidden="true"
+                    >mail</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </footer>
     </main>
