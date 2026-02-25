@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sobre mí | Juan Pérez</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: '#5048e5',
+              'background-light': '#f6f6f8',
+              'background-dark': '#0b0f19',
+              'card-dark': '#111827',
+              'border-dark': '#1f2937',
+            },
+            fontFamily: {
+              display: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              DEFAULT: '0.25rem',
+              lg: '0.5rem',
+              xl: '0.75rem',
+              full: '9999px',
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen transition-colors duration-300"
+  >
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+      <!-- Navigation Bar -->
+      <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md"
+      >
+        <div
+          class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between"
+        >
+          <div
+            class="flex items-center gap-2 text-primary font-bold text-xl tracking-tight"
+          >
+            <span class="material-symbols-outlined text-3xl">terminal</span>
+            <span>Juan Pérez</span>
+          </div>
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Home</a
+            >
+            <a
+              class="text-sm font-medium text-primary underline underline-offset-4 decoration-2"
+              href="#"
+              >About</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#"
+              >Contact</a
+            >
+          </nav>
+          <button
+            class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20"
+          >
+            Hire Me
+          </button>
+        </div>
+      </header>
+      <main class="flex-1 max-w-6xl mx-auto w-full px-6 py-12 md:py-20">
+        <!-- Hero / About Section -->
+        <section
+          id="about"
+          class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-24"
+        >
+          <!-- Imagen / Figura -->
+          <figure class="md:col-span-5 relative group">
+            <div
+              class="absolute -inset-4 bg-primary/20 rounded-xl blur-2xl group-hover:bg-primary/30 transition-all"
+            ></div>
+
+            <div
+              class="relative aspect-square rounded-xl overflow-hidden border-2 border-primary/30 bg-card-dark"
+            >
+              <img
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-1WV4MCnTTmEde85ui_SBPMnQLdVht3n0tU7iNfk6HxlFwyuukr_oonQfPss90QlfiSPlRfkn-xqLZwTYzF0kHAGGR9J8KzvjG3wi-nyAAuy0KqCoKJCbhvyQMCdBI95Zz3nTTXMFScWmk1oBlnw3_YSiW7O8aMorSpAu9Bm_VW8Z7NSkUDh6JDQCZ1J1KWfAYB7_niTmsAymdPTFT6E0zuEZm7zIDw5EC2RsXU6kIJ2YAbSj4ONjGT1f2EB_-ej8E1sXXjWwPBE"
+                alt="Retrato profesional de Juan Pérez, desarrollador Full Stack"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+
+            <figcaption class="absolute -bottom-6 -right-6 hidden md:block">
+              <div class="bg-primary p-4 rounded-xl shadow-xl text-white">
+                <span class="material-symbols-outlined text-4xl"
+                  >code_blocks</span
+                >
+              </div>
+            </figcaption>
+          </figure>
+
+          <!-- Contenido textual -->
+          <article class="md:col-span-7 flex flex-col gap-6">
+            <header>
+              <p
+                class="inline-flex items-center gap-2 text-primary font-semibold tracking-wider uppercase text-xs"
+              >
+                <span class="h-[1px] w-8 bg-primary"></span>
+                Full Stack Developer
+              </p>
+
+              <h2 class="text-4xl md:text-5xl font-bold leading-tight mt-4">
+                Hola, soy <span class="text-primary">Juan Pérez</span>.
+              </h2>
+            </header>
+
+            <div
+              class="space-y-4 text-slate-600 dark:text-slate-400 leading-relaxed text-lg"
+            >
+              <p>
+                Soy un desarrollador apasionado por la tecnología y el diseño
+                web con base en Madrid. Mi enfoque se centra en crear soluciones
+                digitales que no solo funcionen a la perfección, sino que
+                también brinden una experiencia de usuario excepcional.
+              </p>
+
+              <p>
+                A lo largo de mi carrera, he perfeccionado mis habilidades tanto
+                en el frontend como en el backend. Mi misión es transformar
+                ideas complejas en interfaces limpias, funcionales y centradas
+                en el usuario, utilizando las tecnologías más modernas del
+                ecosistema.
+              </p>
+            </div>
+
+            <!-- Acciones -->
+            <footer class="flex flex-wrap gap-4 pt-4">
+              <a
+                href="/cv.pdf"
+                download
+                class="bg-card-dark border border-border-dark hover:border-primary text-white px-6 py-3 rounded-lg flex items-center gap-2 transition-all"
+              >
+                <span class="material-symbols-outlined">download</span>
+                Download CV
+              </a>
+
+              <nav
+                class="flex items-center gap-4 ml-2"
+                aria-label="Social links"
+              >
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-primary transition-colors"
+                  aria-label="Website"
+                >
+                  <span class="material-symbols-outlined text-2xl">public</span>
+                </a>
+                <a
+                  href="#"
+                  class="text-slate-400 hover:text-primary transition-colors"
+                  aria-label="Email"
+                >
+                  <span class="material-symbols-outlined text-2xl"
+                    >alternate_email</span
+                  >
+                </a>
+              </nav>
+            </footer>
+          </article>
+        </section>
+        <!-- Skills Section -->
+        <section id="skills" aria-labelledby="skills-title" class="space-y-12">
+          <!-- Encabezado de sección -->
+          <header
+            class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border-dark pb-6"
+          >
+            <div>
+              <h2 id="skills-title" class="text-3xl font-bold">
+                Skills & Technologies
+              </h2>
+              <p class="text-slate-500 dark:text-slate-400 mt-2">
+                Herramientas y lenguajes con los que trabajo diariamente.
+              </p>
+            </div>
+
+            <span
+              class="material-symbols-outlined text-primary text-4xl opacity-50"
+              aria-hidden="true"
+            >
+              auto_awesome
+            </span>
+          </header>
+
+          <!-- Lista semántica de habilidades -->
+          <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            <!-- HTML -->
+            <li>
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  html
+                </span>
+                <h3 class="font-bold text-lg">HTML</h3>
+                <p class="text-xs text-slate-500 mt-1">
+                  Estructura & Semántica
+                </p>
+              </article>
+            </li>
+
+            <!-- CSS -->
+            <li>
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  css
+                </span>
+                <h3 class="font-bold text-lg">CSS</h3>
+                <p class="text-xs text-slate-500 mt-1">Diseño & Animación</p>
+              </article>
+            </li>
+
+            <!-- JavaScript -->
+            <li>
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  javascript
+                </span>
+                <h3 class="font-bold text-lg">JavaScript</h3>
+                <p class="text-xs text-slate-500 mt-1">Lógica & Dinamismo</p>
+              </article>
+            </li>
+
+            <!-- Node.js -->
+            <li>
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  rebase_edit
+                </span>
+                <h3 class="font-bold text-lg">Node.js</h3>
+                <p class="text-xs text-slate-500 mt-1">Entorno de Servidor</p>
+              </article>
+            </li>
+
+            <!-- Git -->
+            <li>
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  history
+                </span>
+                <h3 class="font-bold text-lg">Git</h3>
+                <p class="text-xs text-slate-500 mt-1">Control de Versiones</p>
+              </article>
+            </li>
+
+            <!-- GitHub -->
+            <li>
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  cloud
+                </span>
+                <h3 class="font-bold text-lg">GitHub</h3>
+                <p class="text-xs text-slate-500 mt-1">Colaboración</p>
+              </article>
+            </li>
+
+            <!-- Responsive Design -->
+            <li class="md:col-span-2">
+              <article
+                class="bg-white dark:bg-card-dark border border-slate-200 dark:border-border-dark p-6 rounded-xl hover:border-primary/50 transition-all group shadow-sm"
+              >
+                <span
+                  class="material-symbols-outlined text-primary mb-4 text-3xl group-hover:scale-110 transition-transform"
+                  aria-hidden="true"
+                >
+                  devices
+                </span>
+                <h3 class="font-bold text-lg">Responsive Design</h3>
+                <p class="text-xs text-slate-500 mt-1">
+                  Adaptabilidad en todas las pantallas
+                </p>
+              </article>
+            </li>
+          </ul>
+        </section>
+        <!-- Call to Action -->
+        <section
+          id="contact-cta"
+          aria-labelledby="cta-title"
+          class="mt-32 rounded-3xl overflow-hidden relative"
+        >
+          <!-- Fondos decorativos -->
+          <div class="absolute inset-0 bg-primary/10" aria-hidden="true"></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-primary/20 to-transparent"
+            aria-hidden="true"
+          ></div>
+
+          <!-- Contenido -->
+          <div
+            class="relative px-8 py-16 md:px-16 md:py-20 text-center flex flex-col items-center gap-6"
+          >
+            <header class="space-y-4">
+              <h2
+                id="cta-title"
+                class="text-3xl md:text-4xl font-bold max-w-2xl"
+              >
+                ¿Tienes un proyecto en mente? Trabajemos juntos.
+              </h2>
+
+              <p class="text-slate-600 dark:text-slate-400 max-w-xl text-lg">
+                Estoy disponible para nuevos proyectos y oportunidades de
+                colaboración. Hablemos sobre cómo puedo ayudarte.
+              </p>
+            </header>
+
+            <nav
+              class="flex flex-wrap justify-center gap-4 mt-4"
+              aria-label="Opciones de contacto y proyectos"
+            >
+              <!-- Si navega a sección contacto → debe ser <a> -->
+              <a
+                href="#contact"
+                class="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/30 hover:scale-105 transition-transform"
+              >
+                Contactar conmigo
+              </a>
+
+              <!-- Si navega a proyectos -->
+              <a
+                href="#projects"
+                class="bg-white dark:bg-slate-800 text-slate-900 dark:text-white px-8 py-4 rounded-xl font-bold border border-slate-200 dark:border-border-dark hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors"
+              >
+                Ver Proyectos
+              </a>
+            </nav>
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer
+        class="border-t border-slate-200 dark:border-border-dark py-12 bg-background-light dark:bg-background-dark"
+      >
+        <div
+          class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <!-- Identidad / Marca -->
+          <div class="flex items-center gap-2 font-bold text-lg">
+            <span
+              class="material-symbols-outlined text-primary"
+              aria-hidden="true"
+            >
+              terminal
+            </span>
+            <span>Pablo Millán</span>
+          </div>
+
+          <!-- Navegación Social -->
+
+          <nav
+            class="flex gap-8 text-sm text-slate-500 dark:text-slate-400"
+            aria-label="Redes sociales"
+          >
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="#"
+              class="hover:text-primary"
+              aria-label="Perfil de Twitter"
+            >
+              Twitter
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="#"
+              class="hover:text-primary"
+              aria-label="Perfil de LinkedIn"
+            >
+              LinkedIn
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="#"
+              class="hover:text-primary"
+              aria-label="Perfil de GitHub"
+            >
+              GitHub
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="#"
+              class="hover:text-primary"
+              aria-label="Perfil de Instagram"
+            >
+              Instagram
+            </a>
+          </nav>
+
+          <!-- Información legal -->
+          <small class="text-sm text-slate-500 dark:text-slate-400">
+            © <time datetime="2024">2024</time> Pablo Millán. Todos los derechos
+            reservados.
+          </small>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
