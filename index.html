@@ -55,6 +55,19 @@
         background: rgba(18, 17, 33, 0.8);
         backdrop-filter: blur(12px);
       }
+      .glass-card {
+        background: rgba(28, 27, 50, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(80, 72, 229, 0.1);
+      }
+      .timeline-line {
+        background: linear-gradient(
+          to bottom,
+          #5048e5 0%,
+          #5048e5 50%,
+          rgba(80, 72, 229, 0.1) 100%
+        );
+      }
     </style>
   </head>
   <body
@@ -102,7 +115,7 @@
         </div>
         <a
           class="bg-primary text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
-          href="#contact"
+          href="mailto:pmilmon29@gmail.com"
         >
           Contact Me
         </a>
@@ -205,21 +218,33 @@
               <h2
                 class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
               >
-                About Me
+                Sobre mí
               </h2>
               <p class="text-3xl md:text-4xl font-bold">
-                Building the web with precision and passion.
+                Construyendo la web con precisión y pasión.
               </p>
             </header>
-
+            <div class="mb-6">
+              <a
+                href="about.html"
+                class="text-primary font-bold flex items-center gap-2"
+              >
+                Más sobre mí
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                  >arrow_right_alt</span
+                >
+              </a>
+            </div>
             <p
               class="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-10"
             >
-              Full Stack Web Developer with 5+ years of experience in building
-              high-quality, scalable web applications. I specialize in modern
-              technologies like React, Node.js, and cloud architecture. My
-              approach combines technical excellence with a deep understanding
-              of user needs to deliver impactful solutions
+              Desarrollador web full stack con más de 3 años de experiencia en
+              la creación de aplicaciones web escalables y de alta calidad. Me
+              especializo en tecnologías modernas como React, Node.js. Mi
+              enfoque combina la excelencia técnica con un profundo conocimiento
+              de las necesidades de los usuarios para ofrecer soluciones
+              impactantes.
             </p>
 
             <ul class="grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch">
@@ -231,7 +256,7 @@
                     code
                   </span>
                   <h3 class="font-bold mb-1">Frontend</h3>
-                  <p class="text-sm text-slate-500">React, Vue, Tailwind</p>
+                  <p class="text-sm text-slate-500">React, JS, Tailwind</p>
                 </article>
               </li>
 
@@ -243,7 +268,7 @@
                     database
                   </span>
                   <h3 class="font-bold mb-1">Backend</h3>
-                  <p class="text-sm text-slate-500">Node, Python, Go</p>
+                  <p class="text-sm text-slate-500">Node, PHP</p>
                 </article>
               </li>
 
@@ -255,7 +280,7 @@
                     cloud
                   </span>
                   <h3 class="font-bold mb-1">Cloud</h3>
-                  <p class="text-sm text-slate-500">AWS, Docker, CI/CD</p>
+                  <p class="text-sm text-slate-500">Docker, CI/CD</p>
                 </article>
               </li>
 
@@ -285,7 +310,7 @@
             <h2
               class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
             >
-              Projects
+              Proyectos
             </h2>
             <p class="text-3xl md:text-4xl font-bold">Featured Works</p>
           </div>
@@ -293,7 +318,7 @@
             href="projects.html"
             class="text-primary font-bold flex items-center gap-2"
           >
-            See all projects
+            Ver todos
             <span
               class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
               >arrow_right_alt</span
@@ -443,202 +468,442 @@
           <h2
             class="text-primary font-bold tracking-widest uppercase text-sm mb-4"
           >
-            Experience
+            Experiencia
           </h2>
           <h3 class="text-3xl md:text-4xl font-bold">
             My Professional Journey
           </h3>
         </header>
+        <div class="flex-1 w-full max-w-5xl mx-auto px-6 py-12 md:py-20">
+          <!-- Timeline Section -->
+          <section class="relative" aria-label="Work Experience Timeline">
+            <!-- Vertical Line -->
+            <div
+              class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-primary/20 -translate-x-1/2 hidden md:block"
+              aria-hidden="true"
+            ></div>
 
-        <div class="max-w-4xl mx-auto px-6 space-y-12">
-          <!-- Experience Item 1 -->
-          <article
-            class="relative pl-12 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-[-48px] before:w-px before:bg-slate-200 dark:before:bg-slate-800"
+            <!-- Experience Item 1 -->
+            <article class="relative mb-20" aria-labelledby="exp-1-role">
+              <div class="flex flex-col md:flex-row items-center">
+                <!-- Timeline Dot -->
+                <div
+                  class="absolute left-4 md:left-1/2 w-4 h-4 bg-primary rounded-full -translate-x-1/2 border-4 border-background-light dark:border-background-dark z-10"
+                  aria-hidden="true"
+                ></div>
+
+                <div
+                  class="w-full md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0"
+                >
+                  <time
+                    datetime="2022-01"
+                    class="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold mb-3 uppercase tracking-wider"
+                  >
+                    Jan 2022 — Present
+                  </time>
+                  <h3 id="exp-1-role" class="text-2xl font-bold mb-1">
+                    Senior Frontend Developer
+                  </h3>
+                  <p class="text-primary font-semibold mb-4">
+                    TechFlow Solutions
+                  </p>
+                </div>
+
+                <div class="w-full md:w-1/2 md:pl-12 pl-12 mt-4 md:mt-0">
+                  <div
+                    class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-primary/30 transition-colors"
+                  >
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-primary text-sm mt-1"
+                          >check_circle</span
+                        >
+                        Leading UI/UX migrations for enterprise-level dashboards
+                        using React and Tailwind CSS.
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-primary text-sm mt-1"
+                          >check_circle</span
+                        >
+                        Mentoring junior staff and implementing standardized
+                        code review processes.
+                      </li>
+                      <li class="flex items-start gap-2">
+                        <span
+                          class="material-symbols-outlined text-primary text-sm mt-1"
+                          >check_circle</span
+                        >
+                        Optimized application performance, resulting in a 40%
+                        reduction in initial load times.
+                      </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >React</span
+                      >
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >TypeScript</span
+                      >
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >Next.js</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Experience Item 2 -->
+            <article class="relative mb-20" aria-labelledby="exp-2-role">
+              <div class="flex flex-col md:flex-row items-center">
+                <div
+                  class="absolute left-4 md:left-1/2 w-4 h-4 bg-primary/40 rounded-full -translate-x-1/2 border-4 border-background-light dark:border-background-dark z-10"
+                  aria-hidden="true"
+                ></div>
+
+                <div class="w-full md:w-1/2 md:order-2 md:pl-12 pl-12">
+                  <time
+                    datetime="2020-03"
+                    class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-bold mb-3 uppercase tracking-wider"
+                  >
+                    Mar 2020 — Dec 2021
+                  </time>
+                  <h3 id="exp-2-role" class="text-2xl font-bold mb-1">
+                    Freelance Web Developer
+                  </h3>
+                  <p class="text-primary font-semibold mb-4">
+                    Creative Pulse Agency
+                  </p>
+                </div>
+
+                <div
+                  class="w-full md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0 mt-4 md:mt-0"
+                >
+                  <div
+                    class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-primary/30 transition-colors"
+                  >
+                    <p
+                      class="text-slate-600 dark:text-slate-400 mb-4 leading-relaxed"
+                    >
+                      Delivered high-performance web applications for 10+
+                      diverse clients ranging from e-commerce to creative
+                      portfolios.
+                    </p>
+                    <ul
+                      class="space-y-3 text-slate-600 dark:text-slate-400 text-sm"
+                    >
+                      <li>
+                        Architected full-stack solutions using Node.js and
+                        MongoDB.
+                      </li>
+                      <li>
+                        Collaborated with design teams to translate Figma
+                        mockups into pixel-perfect code.
+                      </li>
+                    </ul>
+                    <div class="flex flex-wrap gap-2 mt-6 md:justify-end">
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >Vue.js</span
+                      >
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >Node.js</span
+                      >
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >Framer Motion</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Experience Item 3 -->
+            <article class="relative" aria-labelledby="exp-3-role">
+              <div class="flex flex-col md:flex-row items-center">
+                <div
+                  class="absolute left-4 md:left-1/2 w-4 h-4 bg-primary/20 rounded-full -translate-x-1/2 border-4 border-background-light dark:border-background-dark z-10"
+                  aria-hidden="true"
+                ></div>
+
+                <div
+                  class="w-full md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0"
+                >
+                  <time
+                    datetime="2018-06"
+                    class="inline-block px-3 py-1 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs font-bold mb-3 uppercase tracking-wider"
+                  >
+                    Jun 2018 — Feb 2020
+                  </time>
+                  <h3 id="exp-3-role" class="text-2xl font-bold mb-1">
+                    Junior Developer
+                  </h3>
+                  <p class="text-primary font-semibold mb-4">StartUp Hub</p>
+                </div>
+
+                <div class="w-full md:w-1/2 md:pl-12 pl-12 mt-4 md:mt-0">
+                  <div
+                    class="bg-slate-100 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700/50 hover:border-primary/30 transition-colors"
+                  >
+                    <p
+                      class="text-slate-600 dark:text-slate-400 leading-relaxed"
+                    >
+                      Focused on building responsive landing pages and
+                      integrating RESTful APIs. Gained foundational knowledge in
+                      CI/CD pipelines and agile methodologies.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-6">
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >HTML/CSS</span
+                      >
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >JavaScript</span
+                      >
+                      <span
+                        class="px-2 py-1 bg-slate-200 dark:bg-slate-700 rounded text-[10px] font-bold uppercase"
+                        >Git</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </section>
+          <!-- Call to Action -->
+          <section
+            class="mt-24 bg-primary/5 rounded-2xl p-8 md:p-12 border border-primary/10 text-center"
+            aria-labelledby="cta-title"
           >
-            <div
-              class="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-primary ring-4 ring-primary/20"
-            ></div>
-            <header
-              class="flex flex-col md:flex-row md:items-start justify-between gap-4"
-            >
-              <div>
-                <h3 class="text-xl font-bold">Senior Full Stack Developer</h3>
-                <p class="text-primary font-medium">TechInnovate Solutions</p>
-              </div>
-              <time
-                class="text-sm font-bold px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 w-fit"
-                >2021 — Present</time
-              >
-            </header>
-            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-              Leading the core platform team in migrating a legacy monolithic
-              architecture to high-performance microservices. Mentoring junior
-              developers and defining best practices for CI/CD pipelines.
-            </p>
-          </article>
+            <header class="mb-8">
+              <h2 id="cta-title" class="text-2xl md:text-3xl font-bold mb-4">
+                ¿Buscas un desarrollador dedicado?
+              </h2>
 
-          <!-- Experience Item 2 -->
-          <article
-            class="relative pl-12 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-[-48px] before:w-px before:bg-slate-200 dark:before:bg-slate-800"
-          >
-            <div
-              class="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"
-            ></div>
-            <header
-              class="flex flex-col md:flex-row md:items-start justify-between gap-4"
-            >
-              <div>
-                <h3 class="text-xl font-bold">Backend Engineer</h3>
-                <p class="text-primary font-medium">CloudScale Inc.</p>
-              </div>
-              <time
-                class="text-sm font-bold px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 w-fit"
-                >2018 — 2021</time
-              >
+              <p class="text-slate-600 dark:text-slate-400 max-w-lg mx-auto">
+                Estoy abierto a nuevas oportunidades y proyectos interesantes.
+                Construyamos algo increíble juntos.
+              </p>
             </header>
-            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-              Focused on API optimization and database performance. Reduced
-              server response times by 40% using advanced caching strategies and
-              optimized SQL queries.
-            </p>
-          </article>
 
-          <!-- Experience Item 3 -->
-          <article class="relative pl-12">
-            <div
-              class="absolute left-[-6px] top-2 w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"
-            ></div>
-            <header
-              class="flex flex-col md:flex-row md:items-start justify-between gap-4"
-            >
-              <div>
-                <h3 class="text-xl font-bold">Web Developer</h3>
-                <p class="text-primary font-medium">Digital Craft Studio</p>
-              </div>
-              <time
-                class="text-sm font-bold px-3 py-1 rounded-lg bg-slate-200 dark:bg-slate-800 w-fit"
-                >2016 — 2018</time
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:pmilmon29@gmail.com"
+                type="button"
+                class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
               >
-            </header>
-            <p class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
-              Developed responsive user interfaces and interactive components
-              for diverse clients. Collaboration with designers to ensure
-              pixel-perfect implementations.
-            </p>
-          </article>
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >mail</span
+                >
+                Contactame
+              </a>
+
+              <a
+                href="CV/CV_Pablo_Millán_WD.pdf"
+                download
+                class="bg-slate-200 dark:bg-slate-800 px-8 py-3 rounded-lg font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors flex items-center justify-center gap-2"
+              >
+                <span class="material-symbols-outlined" aria-hidden="true"
+                  >description</span
+                >
+                Descargar CV
+              </a>
+            </div>
+          </section>
         </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-          <div
-            class="bg-primary rounded-[2rem] p-8 md:p-16 text-white overflow-hidden relative shadow-2xl shadow-primary/20"
-          >
-            <!-- Icono decorativo -->
-            <div class="absolute top-0 right-0 p-12 opacity-10">
-              <span class="material-symbols-outlined text-[200px]">mail</span>
+      <section
+        id="contact"
+        class="flex-grow flex flex-col items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
+      >
+        <section class="grid lg:grid-cols-2 gap-16 items-start">
+          <!-- Left Column -->
+          <div class="space-y-8">
+            <!-- Heading -->
+            <div class="space-y-4">
+              <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight"
+              >
+                Let's <span class="text-primary">Connect.</span>
+              </h1>
+              <p class="text-lg text-slate-600 dark:text-slate-400 max-w-md">
+                Actualmente estoy disponible para trabajos freelance,
+                colaboraciones de código abierto o oportunidades de tiempo
+                completo. ¡Construyamos algo increíble juntos!
+              </p>
             </div>
 
-            <div class="relative z-10 grid lg:grid-cols-2 gap-16">
-              <!-- Información de contacto -->
-              <address class="not-italic">
-                <header>
-                  <h2 class="text-4xl md:text-5xl font-black mb-6">
-                    Let's work together.
-                  </h2>
-                  <p class="text-xl text-primary-100/80 mb-10 max-w-md">
-                    Have a project in mind? Looking for a partner to build
-                    something amazing? Feel free to reach out.
-                  </p>
-                </header>
-
-                <div class="space-y-6">
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="size-12 rounded-xl bg-white/10 flex items-center justify-center"
-                    >
-                      <span class="material-symbols-outlined"
-                        >alternate_email</span
-                      >
-                    </div>
-                    <div>
-                      <p class="text-sm text-white/60">Email me at</p>
-                      <a
-                        class="font-bold text-lg hover:underline"
-                        href="mailto:hola@juanperez.dev"
-                        >hola@juanperez.dev</a
-                      >
-                    </div>
+            <!-- Contact Details -->
+            <div class="space-y-6">
+              <!-- Email -->
+              <a href="mailto:pmilmon29@gmail.com">
+                <div class="flex items-center gap-4 group">
+                  <div
+                    class="size-12 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all"
+                  >
+                    <span class="material-symbols-outlined">mail</span>
                   </div>
-                  <div class="flex items-center gap-4">
-                    <div
-                      class="size-12 rounded-xl bg-white/10 flex items-center justify-center"
+                  <div>
+                    <p
+                      class="text-xs font-bold uppercase tracking-widest text-slate-500"
                     >
-                      <span class="material-symbols-outlined">location_on</span>
-                    </div>
-                    <div>
-                      <p class="text-sm text-white/60">Location</p>
-                      <p
-                        class="font-bold text-lg"
-                        data-location="Madrid, Spain"
-                      >
-                        Madrid, Spain
-                      </p>
-                    </div>
+                      Email Me
+                    </p>
+                    <p class="text-lg font-medium">pmilmon29@gmail.com</p>
                   </div>
                 </div>
-              </address>
-
-              <!-- Formulario de contacto -->
-              <form class="space-y-4" aria-label="Contact Form">
-                <div class="grid md:grid-cols-2 gap-4">
-                  <label class="hidden" for="fullName">Full Name</label>
-                  <input
-                    id="fullName"
-                    type="text"
-                    placeholder="Full Name"
-                    class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
-                  />
-
-                  <label class="hidden" for="emailAddress">Email Address</label>
-                  <input
-                    id="emailAddress"
-                    type="email"
-                    placeholder="Email Address"
-                    class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
-                  />
-                </div>
-
-                <label class="hidden" for="subject">Subject</label>
-                <input
-                  id="subject"
-                  type="text"
-                  placeholder="Subject"
-                  class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
-                />
-
-                <label class="hidden" for="message">Your Message</label>
-                <textarea
-                  id="message"
-                  rows="4"
-                  placeholder="Your Message"
-                  class="w-full bg-white/10 border-white/20 rounded-xl px-6 py-4 focus:ring-2 focus:ring-white outline-none placeholder:text-white/40"
-                ></textarea>
-
-                <button
-                  type="submit"
-                  class="w-full bg-white text-primary font-black py-4 rounded-xl hover:bg-slate-100 transition-colors shadow-lg"
+              </a>
+              <!-- Location -->
+              <div class="flex items-center gap-4 group">
+                <div
+                  class="size-12 rounded-xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all"
                 >
-                  Send Message
-                </button>
-              </form>
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div>
+                  <p
+                    class="text-xs font-bold uppercase tracking-widest text-slate-500"
+                  >
+                    Location
+                  </p>
+                  <p class="text-lg font-medium">Sevilla, Spain (Remote)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-4">
+              <p
+                class="text-sm font-bold uppercase tracking-widest text-slate-500 mb-4"
+              >
+                Find me on
+              </p>
+
+              <div class="flex gap-4">
+                <!-- LinkedIn -->
+                <a
+                  href="https://www.linkedin.com/in/pablo-millán-montero-67379b281/"
+                  target="_blank"
+                  class="size-12 rounded-full border border-slate-300 dark:border-primary/30 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                >
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    />
+                  </svg>
+                </a>
+
+                <!-- GitHub -->
+                <a
+                  href="https://github.com/PabloMM03"
+                  target="_blank"
+                  class="size-12 rounded-full border border-slate-300 dark:border-primary/30 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                >
+                  <svg class="size-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+
+          <!-- Right Column -->
+          <div
+            class="glass-card p-8 rounded-2xl shadow-2xl relative overflow-hidden"
+          >
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+              <span class="material-symbols-outlined text-8xl rotate-12"
+                >send</span
+              >
+            </div>
+
+            <form id="contact-form" class="space-y-6 relative z-10">
+              <div class="space-y-2">
+                <!-- <label for="name" class="block text-sm font-semibold">
+                  Full Name
+                </label> -->
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Nombre Completo"
+                  class="w-full bg-slate-100 dark:bg-background-dark border border-slate-300 dark:border-primary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-500"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <!-- <label for="email" class="block text-sm font-semibold">
+                  Email Address
+                </label> -->
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="pablo@ejemplo.com"
+                  class="w-full bg-slate-100 dark:bg-background-dark border border-slate-300 dark:border-primary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-500"
+                />
+              </div>
+
+              <div class="space-y-2">
+                <!-- <label for="message" class="block text-sm font-semibold">
+                  Message
+                </label> -->
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  placeholder="Cuentame sobre tu proyecto..."
+                  class="w-full bg-slate-100 dark:bg-background-dark border border-slate-300 dark:border-primary/20 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-500 resize-none"
+                ></textarea>
+              </div>
+
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-xl shadow-primary/20 group"
+                >
+                  <span>Enviar Mensaje</span>
+                  <span
+                    class="material-symbols-outlined text-lg group-hover:translate-x-1 transition-transform"
+                  >
+                    send
+                  </span>
+                </button>
+              </div>
+
+              <p class="text-center text-xs text-slate-500 mt-4 italic">
+                * Powered by EmailJS integration. I usually respond within 24
+                hours.
+              </p>
+            </form>
+          </div>
+        </section>
       </section>
     </main>
 
+    <!-- Success Notification (Hidden by default) -->
+    <section
+      class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 transform translate-y-20 opacity-0 transition-all duration-500 pointer-events-none"
+      id="success-toast"
+    >
+      <span class="material-symbols-outlined">check_circle</span>
+      <span class="font-medium">Message sent successfully!</span>
+    </section>
     <!-- Footer -->
     <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
       <div
@@ -651,26 +916,26 @@
               >terminal</span
             >
           </div>
-          <address class="not-italic font-bold">Juan Pérez</address>
+          <address class="not-italic font-bold">Pablo Millán</address>
         </div>
 
         <!-- Derechos -->
         <p class="text-slate-500 text-sm">
-          © 2024 Juan Pérez. Built with precision and caffeine.
+          © 2024 Pablo Millán. Casi todos los derechos reservados.
         </p>
 
         <!-- Enlaces de redes / iconos -->
         <nav class="flex gap-4" aria-label="Social Links">
           <a
             class="size-10 rounded-lg flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-all"
-            href="#"
+            href="linkedin.com/in/pablo-millán-montero-67379b281/"
             aria-label="Website"
           >
             <span class="material-symbols-outlined text-lg">public</span>
           </a>
           <a
             class="size-10 rounded-lg flex items-center justify-center bg-slate-100 dark:bg-slate-800 hover:bg-primary hover:text-white transition-all"
-            href="#"
+            href="https://github.com/PabloMM03"
             aria-label="GitHub"
           >
             <span class="material-symbols-outlined text-lg">code</span>
@@ -685,5 +950,68 @@
         </nav>
       </div>
     </footer>
+
+    <!-- Form behavior simulation script for UI preview -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+      emailjs.init('bNstoAJB-nC9uK_pH')
+    </script>
+    <script>
+      const form = document.getElementById('contact-form')
+      const toast = document.getElementById('success-toast')
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        const btn = form.querySelector('button')
+        const originalContent = btn.innerHTML
+
+        // Loading state
+        btn.disabled = true
+        btn.innerHTML =
+          '<span class="material-symbols-outlined animate-spin">sync</span> Sending...'
+        btn.classList.add('opacity-80')
+
+        // 1️⃣ Enviar email principal (a mi)
+        emailjs
+          .sendForm('service_2vz32x2', 'template_iz1bo5r', form)
+          .then(() => {
+            // 2️⃣ Enviar auto-reply al usuario
+            return emailjs.send('service_2vz32x2', 'template_hmg2vpm', {
+              name: form.name.value,
+              email: form.email.value,
+              message: form.message.value,
+            })
+          })
+          .then(() => {
+            // Restaurar botón
+            btn.innerHTML = originalContent
+            btn.disabled = false
+            btn.classList.remove('opacity-80')
+
+            // Mostrar toast
+            toast.classList.remove('translate-y-20', 'opacity-0')
+            toast.classList.add('translate-y-0', 'opacity-100')
+
+            form.reset()
+
+            setTimeout(() => {
+              toast.classList.add('translate-y-20', 'opacity-0')
+              toast.classList.remove('translate-y-0', 'opacity-100')
+            }, 4000)
+          })
+          .catch((error) => {
+            console.error('EmailJS Error:', error)
+
+            btn.innerHTML = 'Error ❌ Try again'
+            btn.disabled = false
+            btn.classList.remove('opacity-80')
+
+            setTimeout(() => {
+              btn.innerHTML = originalContent
+            }, 2000)
+          })
+      })
+    </script>
   </body>
 </html>

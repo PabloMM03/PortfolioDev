@@ -1,0 +1,164 @@
+:root {
+  --primary: #6366f1;
+  --bg-light: #ffffff;
+  --bg-muted: #f8fafc;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-secondary {
+  background: #e2e8f0;
+  padding: 0.7rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  display: grid;
+  gap: 3rem;
+  padding: 6rem 0;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 16px;
+}
+
+.badge {
+  background: #eef2ff;
+  color: var(--primary);
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.section-light {
+  background: var(--bg-muted);
+  padding: 4rem 0;
+}
+
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.card img {
+  width: 100%;
+  display: block;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.contact-section {
+  background: var(--primary);
+  color: white;
+  padding: 4rem 0;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.btn-light {
+  background: white;
+  color: var(--primary);
+  padding: 1rem;
+  border-radius: 8px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
